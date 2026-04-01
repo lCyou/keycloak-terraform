@@ -4,11 +4,13 @@ variable "keycloak_url" {
 }
 
 variable "keycloak_client_id" {
-  type    = string
-  default = "admin-cli"
+  description = "Keycloak client ID for authentication"
+  type        = string
+  default     = "terraform-manage"
 }
 
 variable "keycloak_client_secret" {
-  type      = string
-  sensitive = true
+  description = "Keycloak client secret"
+  type        = string
+  sensitive   = true
 }
